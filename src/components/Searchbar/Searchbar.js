@@ -9,18 +9,20 @@ export const Searchbar = ({ onSubmit }) => {
           query: '',
         }}
         onSubmit={values => {
-          onSubmit(values);
+          onSubmit(values.query);
         }}
       >
-        <Form className='SearchForm'>
+        <Form className="SearchForm">
           <div>
             <Field
-            className = "SearchForm-input"
+              className="SearchForm-input"
               type="text"
               name="query"
               placeholder="Search image and photo"
             />
-            <button className='SearchForm-button' type="submit">Search</button>
+            <button className="SearchForm-button" type="submit">
+              Search
+            </button>
           </div>
         </Form>
       </Formik>
